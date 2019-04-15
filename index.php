@@ -27,21 +27,19 @@ $f3->route('GET /' , function (){
 });
 
 // Define  breakfast route
-$f3 ->route('GET /breakfast' ,function (){
-    //Display a views
-//    echo "<h1>Breakfast Page</h1>";
+$f3 ->route('GET /breakfast/continental' ,function (){
     //Display a views
     $view = new Template();
-    echo $view->render('views/breakfast.html');
+    echo $view->render('views/bfast-cont.html');
 });
 
-$f3 ->route('GET /lunch' ,function (){
-    //Display a views
-//    echo "<h1>Breakfast Page</h1>";
+// Define  breakfast route
+$f3 ->route('GET /lunch/brunch/buffet' ,function (){
     //Display a views
     $view = new Template();
-    echo $view->render('views/lunch.html');
+    echo $view->render('views/buffet.html');
 });
+
 
 //Run Fat-Free
 $f3->run();
