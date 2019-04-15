@@ -21,11 +21,15 @@ $f3->set('DEBUG', 3);
 
 // Define a default route
 $f3->route('GET /' , function (){
+    //Display a views
+    $view = new Template();
+    echo $view->render('views/home.html');
+});
 
-    echo "Food";
-    //Display a view
-//    $view = new Template();
-//    echo $view->render('views/home2.html');
+// Define  breakfast route
+$f3 ->route('GET /breakfast' ,function (){
+    //Display a views
+    echo "<h1>Breakfast Page</h1>";
 });
 
 
